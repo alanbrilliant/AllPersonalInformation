@@ -1,12 +1,32 @@
 <template>
-  <div id="app">
+  
+<div id="app">
+        <HereMap
+            appId="NlnjIv910HhOC5VoJ1dN"
+            appCode="yQ2-iQULjNTcYuXds-AfIA"
+            lat="37.7397"
+            lng="-121.4252"
+            width="100%"
+            height="835px" />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
-  </div>
+</div>
+    
 </template>
+
+<script>
+    import HereMap from "./components/HereMap.vue"
+
+    export default {
+        name: 'app',
+        components: {
+            HereMap
+        }
+    }
+</script>
 
 <style lang="scss">
 #app {

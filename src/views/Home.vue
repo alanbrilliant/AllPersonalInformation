@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
+
+<div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your cool ass shit App which has been modified"/>
+	
   </div>
+
+
+
+
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
-
+import HereMap from "@/components/HereMap.vue";
 export default {
   name: 'home',
   components: {
     HelloWorld,
+	HereMap,
   },
 };
 </script>

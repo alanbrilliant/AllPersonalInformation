@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "clarifai": "^2.9.0",
+    "here-js-api": "^1.0.10",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-beautiful-chat": "^2.0.0",

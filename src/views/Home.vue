@@ -1,9 +1,11 @@
 <template>
   <div class="home">
-    <!--  -->
     <input v-model="picLink" type="text"> <button v-on:click="this.yo">Update</button> <br>
     <img alt="Vue logo" v-bind:src="this.picLink">
-    <HelloWorld v-bind:msg="this.datassdata[0].name.toString() +': '+ (this.datassdata[0].value*100).toString()+'% accuracy'"/>
+    <HelloWorld v-bind:msg="this.datassdata[0].name.toString()"/>
+    
+    <!-- <HelloWorld v-bind:msg="this.datassdata[0].name.toString() +': '+ (this.datassdata[0].value*100).toString()+'% accuracy'"/> -->
+
   </div>
 </template>
 

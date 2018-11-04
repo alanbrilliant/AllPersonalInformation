@@ -1,6 +1,6 @@
-'use strict';
 
-var ApiContracts = require('authorizenet').APIContracts;
-var ApiControllers = require('authorizenet').APIControllers;
-var utils = require('../utils.js');
-var constants = require('../constants.js');
+
+const ApiContracts = require('authorizenet').APIContracts;
+const ApiControllers = require('authorizenet').APIControllers;
+const utils = require('../utils.js');
+const constants = require('../constants.js');

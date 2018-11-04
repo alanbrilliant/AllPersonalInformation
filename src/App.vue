@@ -1,12 +1,5 @@
 <template>
 <div id="app">
-        <HereMap
-            appId="NlnjIv910HhOC5VoJ1dN"
-            appCode="yQ2-iQULjNTcYuXds-AfIA"
-            lat="37.7397"
-            lng="-121.4252"
-            width="100%"
-            height="835px" />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -30,23 +23,19 @@
   </ais-index>
 
 </div>
-  
 
 
-    
 </template>
 
 <script>
-    import HereMap from "./components/HereMap.vue"
-    import Home from "./views/Home.vue"
+import Home from './views/Home.vue';
 
-    export default {
-        name: 'app',
-        components: {
-            HereMap,
-            Home
-        }
-    }
+export default {
+  name: 'app',
+  components: {
+    Home,
+  },
+};
 
 </script>
 

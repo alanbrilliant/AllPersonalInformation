@@ -28,6 +28,7 @@
             Home
         }
     }
+
 </script>
 
 <style lang="scss">

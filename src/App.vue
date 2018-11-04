@@ -26,6 +26,7 @@
             HereMap
         }
     }
+
 </script>
 
 <style lang="scss">

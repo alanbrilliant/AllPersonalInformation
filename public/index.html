@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  
+<div id="map" style="width: 600px; height: 400px; background: grey"></div>
+  <input v-model="picLink" type="text"> <button v-on:click="console.log("Good")">Update Lattitude</button> <br>
+<input v-model="picLink" type="text"> <button v-on:click="this.yo">Update Longitude</button> <br>
     <title>allpersonalinformation</title>
   </head>
   <body>
@@ -16,8 +18,43 @@
     <!-- built files will be auto injected -->
     <script src="https://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-  
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-pano.js" type="text/javascript" charset="utf-8"></script>
 
 
 </body>
+
+<script type="text/javascript" charset="utf-8">
+  // Create a Platform object:
+  var platform = new H.service.Platform({
+    'app_id': 'NlnjIv910HhOC5VoJ1dN',
+    'app_code': 'yQ2-iQULjNTcYuXds-AfIA'
+  });
+
+  // Configure panorama with platform credentials:
+  platform.configure(H.map.render.panorama.RenderEngine)
+
+var defaultLayers = platform.createDefaultLayers();
+
+  
+// Instantiate a map, giving the constructor the engine type to use:
+  map = new mapsjs.Map(document.getElementById('map'), defaultLayers.normal.map, {
+    center: {lat: 48.8733641244471, lng: 2.294754032045603},
+    zoom: 25,
+    engineType: H.Map.EngineType.PANORAMA
+  });
+
+H.map.render.panorama.RenderEngine.getClosestPanoramas(
+    {lat:51.51, lng: -0.07}, function(panoramaData) {
+    if (panoramaData.length) {
+    
+      // Set map center to the location of the first available panorama:
+      map.setCenter(panoramaData[0].position);
+      
+      // Switch to to the panorama engine to show the panorama:
+      map.setEngineType(H.Map.EngineType.PANORAMA);
+    }
+  });
+
+
+</script>
 </html>

@@ -27,14 +27,16 @@
         	"app_code": this.appCode
     	});
  },
-        mounted() {this.map = new H.Map(
+        mounted() {
+this.map = new H.Map(
         this.$refs.map,
         this.platform.createDefaultLayers().normal.map,
         {
             zoom: 10,
             center: { lng: this.lng, lat: this.lat }
         }
-    ); }
+    );
+ }
     }
 </script>
 

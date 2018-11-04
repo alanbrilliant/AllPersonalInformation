@@ -5,10 +5,6 @@
     <img alt="Vue logo" v-bind:src="this.picLink">
     <HelloWorld v-bind:msg="this.datassdata[0].name.toString() +': '+ (this.datassdata[0].value*100).toString()+'% accuracy'"/>
   </div>
-
-
-
-
 </template>
 
 <script>
@@ -20,7 +16,6 @@ export default {
   name: 'home',
   components: {
     HelloWorld,
-	HereMap,
   },
 
   data() {

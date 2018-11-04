@@ -13,6 +13,8 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 import {appclar} from '@/clarifai.js';
+//import {client} from '@/google-images.js';
+//import GoogleImageSearch from 'free-google-image-search';
 
 export default {
   name: 'home',
@@ -24,7 +26,7 @@ export default {
     return {
       message: 'hrllo',
       datassdata: [],
-      picLink: 'https://pbs.twimg.com/profile_images/378800000021016777/1d530fa4b92b883270c5bdd7583ed073_400x400.jpeg'
+       picLink: 'https://pbs.twimg.com/profile_images/378800000021016777/1d530fa4b92b883270c5bdd7583ed073_400x400.jpeg'
     };
   },
   methods: {
@@ -40,8 +42,33 @@ export default {
         });
       })
     }
-  },beforeMount(){
+    //,
+    //activateSearch : async function(){
+      //const images = await client.search('Steve Angello')
+      //console.log(images)
+        //   .then(images => {
+  //            console.log(images['url']);
+
+  //      /*
+  //       [{
+  //           "url": "http://steveangello.com/boss.jpg",
+  //           "type": "image/jpeg",
+  //           "width": 1024,
+  //           "height": 768,
+  //           "size": 102451,
+  //           "thumbnail": {
+  //               "url": "http://steveangello.com/thumbnail.jpg",
+  //               "width": 512,
+  //               "height": 512
+  //           }
+  //       }]
+  //        */
+  //   });
+    //}
+  },
+  beforeMount(){
     this.yo();
+    this.activateSearch();
   }
 };
 </script>

@@ -1,5 +1,4 @@
 <template>
-  
 <div id="app">
         <HereMap
             appId="NlnjIv910HhOC5VoJ1dN"
@@ -13,7 +12,27 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+
+
+<ais-index
+    app-id="NLJ7EG9SMB"
+    api-key="a49fb07cc3c1c4a400fcbf24e4e320b1"
+    index-name="Test"
+  >
+    <ais-search-box></ais-search-box>
+    <ais-results>
+      <template slot-scope="{ result }">
+        <h2>
+          <ais-highlight :result="result" attribute-name="name"></ais-highlight>
+        </h2>
+      </template>
+    </ais-results>
+  </ais-index>
+
 </div>
+  
+
+
     
 </template>
 

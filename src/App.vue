@@ -19,11 +19,13 @@
 
 <script>
     import HereMap from "./components/HereMap.vue"
+    import Home from "./views/Home.vue"
 
     export default {
         name: 'app',
         components: {
-            HereMap
+            HereMap,
+            Home
         }
     }
 </script>
